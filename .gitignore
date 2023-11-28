@@ -1,0 +1,11 @@
+node_modules/
+#we use / for node_module to make sure that :
+#If you have node_modules/ in your .gitignore, 
+#it will only ignore the entire directory named node_modules.
+
+#If you have node_modules (without the trailing /), 
+#it will ignore both directories and files named node_modules.
+
+#Using node_modules/ is more specific and ensures that only the directory itself is ignored, not any files that might have similar names.
+#It's a common convention in .gitignore files to use the trailing / to specify directories.
+src/config/config.js
