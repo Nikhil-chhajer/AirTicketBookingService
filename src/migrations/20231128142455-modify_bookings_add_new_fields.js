@@ -36,6 +36,7 @@ module.exports = {
      */
     await queryInterface.removeColumn('Bookings','noOfSeats');
     await queryInterface.removeColumn('Bookings','totalCost'); 
+    //these columns will be remove when we do migration undo(npx sequelize db:migrate:undo)
 
   }
 };
