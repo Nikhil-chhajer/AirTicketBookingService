@@ -4,6 +4,7 @@ const { AppError, ValidationError } = require('../utils/errors/index');
 class BookingRepository {
     async create(data) {
         try {
+            console.log(data);
             const booking = await Booking.create(data);
             return booking;
         } catch (error) {

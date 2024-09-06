@@ -3,7 +3,7 @@ class ValidationError extends Error{
     constructor(error){
         super();
         let explaination=[];
-        error.errors.for ((err)=> {
+        error.errors.forEach((err)=> {
           explaination.push(err.message);
         });
         this.name='validationError';

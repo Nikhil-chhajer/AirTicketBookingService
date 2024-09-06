@@ -11,7 +11,8 @@ module.exports = {
      */
     await queryInterface.addColumn(
       'Bookings',
-      'noOfSeats',{
+      'noOfSeats',
+      {
         type:Sequelize.INTEGER,
         allowNull:false,
         defaultValue:1
@@ -19,12 +20,13 @@ module.exports = {
     );
     await queryInterface.addColumn(
       'Bookings',
-      'totalCost',{
+      'TotalCost',
+      {
         type:Sequelize.INTEGER,
         allowNull:false,
         defaultValue:0
       }
-    );
+    )
   },
 
   async down (queryInterface, Sequelize) {
@@ -35,8 +37,6 @@ module.exports = {
      * await queryInterface.dropTable('users');
      */
     await queryInterface.removeColumn('Bookings','noOfSeats');
-    await queryInterface.removeColumn('Bookings','totalCost'); 
-    //these columns will be remove when we do migration undo(npx sequelize db:migrate:undo)
-
+    await queryInterface.removeColumn('Bookings','TotalCost');
   }
 };
